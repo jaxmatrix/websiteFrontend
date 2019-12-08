@@ -1,0 +1,9 @@
+<div class="row p-1 bg-primary text-white" style="border:1px solid red">
+  <h4>Project</h4>
+</div>
+<div class="row justify-content-center" style="border:1px solid orange;">
+  <div class="col-4" *ngFor="let project of projects" style="margin-top:15px;margin-bottom:12px;">
+    <app-project-card [project]="project"></app-project-card>
+  <div>
+</div>
+
