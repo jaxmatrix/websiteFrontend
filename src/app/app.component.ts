@@ -4,6 +4,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { NewsComponent } from './component/news/news.component';
 import { ProjectsComponent } from './component/projects/projects.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
