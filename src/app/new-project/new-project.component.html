@@ -1,0 +1,29 @@
+<!-- <p>new-project works!</p> -->
+<!-- <div class="container"> -->
+<div class="row bg-secondary text-white">
+
+    <div class="col-sm-2 bg-light">
+        <ul class="nav flex-column">
+
+            <li class="nav-item">
+                <a class="nav-link active" [routerLink] = "[{outlets:{lollipop:['summary']}}]">summary</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink] ="[{outlets:{lollipop:['budget']}}]">Budget</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink] = "[{outlets:{lollipop:['timeline']}}]">Timeline</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="col-sm-10 bg-secondary">
+        <router-outlet name="lollipop"> </router-outlet>
+        
+    </div>
+
+    <!-- </div> -->
+</div>
