@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -28,7 +29,7 @@ export class UserComponent implements OnInit {
   onSubmit(login) {
     console.log('Login Information', login);
     this.http.post( 'api/login', login).subscribe(
-      (response) => {
+      (response: any) => {
         console.log(response);
       },
 
