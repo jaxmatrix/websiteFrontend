@@ -15,7 +15,10 @@ import { ProjectPageComponent } from './project-page/project-page.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
-
+import { NewProjectComponent } from './new-project/new-project.component';
+import { SummaryComponent } from'./new-project/summary/summary.component';
+import { BudgetComponent } from './new-project/budget/budget.component';
+import { TimelineComponent } from './new-project/timeline/timeline.component';
 
 const appRoutes: Routes = [
   { path: '' , redirectTo: '/home' , pathMatch: 'full' },
@@ -23,6 +26,12 @@ const appRoutes: Routes = [
   { path: 'projects' , component : ProjectPageComponent },
   { path: 'register' , component : RegisterComponent },
   { path: 'user' , component : UserComponent },
+  { path: 'new_project' , component : NewProjectComponent, children:
+    [{path: 'summary' , component: SummaryComponent , outlet : 'lollipop'},
+     {path: 'budget' , component: BudgetComponent , outlet : 'lollipop'},
+     {path: 'timeline' , component: TimelineComponent , outlet : 'lollipop'}
+    ]},
+  // { path: 'new-project/summary', component:SummaryComponent , outlet:'lollipop'},
 ];
 
 
@@ -38,6 +47,10 @@ const appRoutes: Routes = [
     RegisterComponent,
     UserComponent,
     HomeComponent,
+    NewProjectComponent,
+    SummaryComponent,
+    BudgetComponent,
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,
