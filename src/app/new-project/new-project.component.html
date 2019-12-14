@@ -1,12 +1,12 @@
 <!-- <p>new-project works!</p> -->
 <!-- <div class="container"> -->
-<div class="row bg-secondary text-white">
+<div class="row bg-secondary text-white p-6">
 
     <div class="col-sm-2 bg-light">
         <ul class="nav flex-column">
 
             <li class="nav-item">
-                <a class="nav-link active" [routerLink] = "[{outlets:{lollipop:['summary']}}]">summary</a>
+                <a class="nav-link active" [routerLink] = "[{outlets:{lollipop:['summary']}}]">Summary</a>
             </li>
 
             <li class="nav-item">
@@ -20,9 +20,8 @@
         </ul>
     </div>
 
-    <div class="col-sm-10 bg-secondary">
-        <router-outlet name="lollipop"> </router-outlet>
-        
+    <div class="col-sm-10 bg-secondary p-6">
+        <router-outlet name="lollipop" class="p-6"> </router-outlet>
     </div>
 
     <!-- </div> -->

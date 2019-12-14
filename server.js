@@ -12,5 +12,5 @@ app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 app.post('/login', (req,res) => {
 
   console.log(req.body);
-  res.end("Obtained");
+  res.json(req.body);
 });

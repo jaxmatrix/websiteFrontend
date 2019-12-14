@@ -1,18 +1,21 @@
 <!-- <p>summary works!</p> -->
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">HEADING</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">SUBHEADING</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">DESCRIPTION</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">+ Add summary</button>
+<form >
+  <div class="form-group">
+    <label for="exampleInputEmail1">HEADING</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" (keyup)="title = $event.target.value">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group" *ngFor="let control of controls">
+    <app-sub-heading [subHeading]="control" (update)="updateInformation($event)"></app-sub-heading>
+  </div>
+
+  <div class="form-group">
+    <label for="subheading">New Sub-Heading</label>
+    <input (input)="newHeading = $event.target.value"type="text" class="form-control" id="subheading">
+    <button class="btn btn-light" (click)="addSubSection(this.newHeading)">Add Another Section</button>
+  </div>
+  <button class="btn btn-primary" (click)="submitProjectSummary()">Submit Summary</button>
+
+
 </form>

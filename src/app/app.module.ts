@@ -16,9 +16,10 @@ import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { NewProjectComponent } from './new-project/new-project.component';
-import { SummaryComponent } from'./new-project/summary/summary.component';
+import { SummaryComponent } from './new-project/summary/summary.component';
 import { BudgetComponent } from './new-project/budget/budget.component';
 import { TimelineComponent } from './new-project/timeline/timeline.component';
+import { SubHeadingComponent } from './new-project/summary/sub-heading/sub-heading.component';
 
 const appRoutes: Routes = [
   { path: '' , redirectTo: '/home' , pathMatch: 'full' },
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     SummaryComponent,
     BudgetComponent,
     TimelineComponent,
+    SubHeadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SubHeadingComponent]
 })
 export class AppModule { }
